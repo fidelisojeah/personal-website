@@ -35,3 +35,12 @@ jobs:
             - run:
                 name: "Deploy Application To Firebase"
                 command: yarn deploy -- --token "$FIREBASE_TOKEN"
+
+workflows:
+    version: 2
+    build_deploy:
+        jobs:
+            - build:
+                filters:
+                    branches:
+                        only: master
