@@ -1,0 +1,37 @@
+version: 2
+jobs:
+    build:
+        docker:
+            - image: circleci/node:8
+        working_directory: ~/repo
+        steps:
+            - checkout
+
+            # Download and cache dependencies
+            - restore_cache:
+                keys:
+                    - v1-dependencies-{{ checksum "package.json" }}
+                    - v1-dependencies-
+
+            - run: yarn install
+
+            - save_cache:
+                paths:
+                    - node_modules
+                key: v1-dependencies-{{ checksum "package.json" }}
+
+            - run:
+                name: "Build Functions"
+                command: |
+                    cd functions/
+                    npm install
+                    npm run build
+                    cd ~/repo
+
+            - run:
+                name: "Build React Application"
+                command: yarn build
+
+            - run:
+                name: "Deploy Application To Firebase"
+                command: yarn deploy -- --token "$FIREBASE_TOKEN"
