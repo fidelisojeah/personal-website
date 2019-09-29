@@ -25,7 +25,6 @@
         "exenv": "^1.2.2",
         "file-loader": "^4.2.0",
         "firebase": "^6.6.2",
-        "firebase-cli": "^1.2.0",
         "firebase-tools": "^7.4.0",
         "history": "^4.10.1",
         "html-webpack-plugin": "^4.0.0-beta.8",
