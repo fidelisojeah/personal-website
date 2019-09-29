@@ -1,0 +1,4 @@
+node_modules/
+webpack.config.js
+paths.js
+serviceWorker.js

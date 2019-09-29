@@ -1,0 +1,68 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": ["react", "jsx-a11y", "import"],
+    "extends": ["airbnb", "react-app"],
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "jest": true
+    },
+    "rules": {
+        "react/jsx-indent": ["error", 4],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "react/jsx-indent-props": [
+          "error", 4
+        ],
+        "comma-dangle": 0,
+        "react/destructuring-assignment": "off",
+        "react/static-property-placement": ["warn", "static public field"],
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": true,
+                "classes": true,
+                "variables": false
+            }
+        ],
+        "global-require": "off",
+        "react/jsx-filename-extension": [
+            "error",
+            {
+                "extensions": [".js", ".jsx"]
+            }
+        ],
+        "jsx-a11y/label-has-associated-control": [
+            "error",
+            {
+                "required": {
+                    "some": ["nesting", "id"]
+                }
+            }
+        ],
+        "jsx-a11y/label-has-for": [
+            "error",
+            {
+                "required": {
+                    "some": ["nesting", "id"]
+                }
+            }
+        ],
+        "react/jsx-props-no-spreading": "off",
+        "react/state-in-constructor": "off"
+    },
+    "settings": {
+        "import/resolver": "webpack",
+        "react": {
+            "version": "detect"
+        }
+    }
+}
