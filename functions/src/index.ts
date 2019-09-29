@@ -24,9 +24,9 @@ export const sendEmail = functions.firestore.document('messages/{message}').onWr
 
         const { emailHTML, emailText } = generateEmail(name);
         try {
-            await sendMail(API_KEY, emailAddress, 'Thanks for Reaching Out!', emailHTML, emailText);
+            await sendMail(API_KEY, emailAddress, 'Thanks for Reaching Out!', emailHTML, emailText, name);
             // mail to me
-            await sendMail(API_KEY, 'fidelis.ojeah@gmail.com', 'A new Contact has been made.', 'Check firebase storage', 'Check firebase storage');
+            await sendMail(API_KEY, 'fidelis.ojeah@gmail.com', 'A new Contact has been made to delis.xyz.', 'Check firebase storage', 'Check firebase storage', 'Fidelis Ojeah');
         } catch (error) {
             console.log(error);
         }
