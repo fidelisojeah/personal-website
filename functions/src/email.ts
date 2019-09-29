@@ -7,7 +7,7 @@ export const generateEmail = (name: string) => {
         theme: 'default',
         product: {
             // Appears in header & footer of e-mails
-            name: 'delis.xyz',
+            name: 'Fidelis Ojeah Jr.',
             link: 'https://delis.xyz/'
         }
     });
