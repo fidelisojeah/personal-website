@@ -1,0 +1,2 @@
+User-agent: *
+sitemap:  https://www.delis.xyz/sitemap.xml
