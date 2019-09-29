@@ -7,7 +7,7 @@ export const generateEmail = (name: string) => {
         theme: 'default',
         product: {
             // Appears in header & footer of e-mails
-            name: 'Delis',
+            name: 'delis.xyz',
             link: 'https://delis.xyz/'
         }
     });
@@ -15,6 +15,7 @@ export const generateEmail = (name: string) => {
     const email = {
         body: {
             name,
+            signature: 'Regards',
             intro: ['Thanks again for reaching out to me', 'I\'m very excited hearing from you.'],
             action: {
                 instructions: 'I can assure you that I\'ve received your email, but while you wait for my response, you can checkout my github',
@@ -35,12 +36,18 @@ export const generateEmail = (name: string) => {
 };
 
 
-export const sendMail = async ( SENDGRID_API_KEY: string, to: string, subject: string, html: string, text: string) => {
+export const sendMail = async ( SENDGRID_API_KEY: string, to: string, subject: string, html: string, text: string, name: string) => {
     try{
         sgMail.setApiKey(SENDGRID_API_KEY);
         const message = {
-            to,
-            from: 'hello@delis.xyz',
+            to:{
+                name,
+                email: to
+            },
+            from: {
+                name: 'Fidelis Ojeah Jr.',
+                email: 'hello@delis.xyz',
+            },
             subject,
             text,
             html
