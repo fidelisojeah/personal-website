@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     min-height: 100vh;
     padding: 0 150px;
     ${({ theme }) => theme.media.ipad(css`padding: 0 100px;`)}
-    ${({ theme }) => theme.media.tablet(css`padding: 0 50px;`)}
+    ${({ theme }) => theme.media.tablet(css`padding: 0 20px;`)}
     ${({ theme }) => theme.media.tinyScreen(css`padding: 0 10px;`)}
 `;
 
@@ -34,6 +34,8 @@ export const Hero = styled(Section)`
     div {
         width: 100%;
     }
+    ${({ theme }) => theme.media.ipad(css`padding-top: 0;`)}
+
 `;
 
 export const Intro = styled.h1`

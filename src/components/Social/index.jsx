@@ -13,12 +13,7 @@ import Icons from './Icons';
 function Social({ socialLinks }) {
     return (
         <Wrapper>
-            <SocialList
-                data-aos="fade-up"
-                data-aos-once="true"
-                data-aos-delay="50"
-                data-aos-easing="ease-in-out"
-            >
+            <SocialList>
                 {Array.isArray(socialLinks)
                     && socialLinks.map(({ url, icon }) => (
                         <SocialItem

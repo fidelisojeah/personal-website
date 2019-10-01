@@ -6,24 +6,30 @@ export const Wrapper = styled.div`
     width: 60px;
     bottom: 90px;
     right: 60px;
-    color: ${(props) => props.theme.whiteText};
-    ${(props) => props.theme.media.desktop(css`
+    color: ${({ theme }) => theme.whiteText};
+    ${({ theme }) => theme.media.desktop(css`
             right: 40px;
         `)}
-    ${(props) => props.theme.media.ipad(css`
+    ${({ theme }) => theme.media.ipad(css`
             right: 25px;
         `)}
+    ${({ theme }) => theme.media.tablet`bottom: 40px;`};
+
 `;
 
 export const SocialList = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
+    ${({ theme }) => theme.media.tablet`flex-direction: row-reverse;`};
+
 `;
 
 export const SocialItem = styled.li`
     &:last-of-type {
         margin-bottom: 20px;
+    ${({ theme }) => theme.media.tablet`margin-bottom: 0;`};
+
     }
 `;
 
