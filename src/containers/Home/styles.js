@@ -35,7 +35,6 @@ export const Hero = styled(Section)`
         width: 100%;
     }
     ${({ theme }) => theme.media.ipad(css`padding-top: 0;`)}
-
 `;
 
 export const Intro = styled.h1`
@@ -44,7 +43,7 @@ export const Intro = styled.h1`
     font-size: ${(props) => props.theme.fontSizes.large};
     ${(props) => props.theme.media.ipad(css`font-size: ${props.theme.fontSizes.medium};`)}
     ${(props) => props.theme.media.tablet(css`font-size: ${props.theme.fontSizes.small};`)}
-    `;
+`;
 
 export const Name = styled.h2`
 
@@ -55,7 +54,6 @@ export const Name = styled.h2`
     ${({ theme }) => theme.media.ipad`font-size: 60px;`};
     ${({ theme }) => theme.media.tablet`font-size: 40px;`};
     ${({ theme }) => theme.media.tinyScreen`font-size: 30px;`};
-
 `;
 
 
