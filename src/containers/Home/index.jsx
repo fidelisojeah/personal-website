@@ -173,7 +173,6 @@ class Home extends PureComponent {
                             data-aos-offset="200"
                             data-aos-delay="70"
                             data-aos-easing="ease-in-out"
-                            data-aos-once="false"
                         >
                             <DownloadCV
                                 href={this.props.resume.link}
