@@ -20,7 +20,7 @@ const INITIALSTATE = {
         }
     ],
     resume: {
-        link: 'https://firebasestorage.googleapis.com/v0/b/delis-xyz-52b13.appspot.com/o/fidelis-ojeah.pdf?alt=media&token=e09c4f1e-7458-4e91-b80d-d3dec7e692ef'
+        link: 'https://firebasestorage.googleapis.com/v0/b/delis-xyz-52b13.appspot.com/o/fidelisojeah.pdf?alt=media&token=3b36226e-87e4-4f9e-9bcd-58a2d2a9198c'
     }
 };
 
